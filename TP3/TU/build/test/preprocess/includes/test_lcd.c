@@ -1,2 +1,5 @@
 ---
 - "/var/lib/gems/3.0.0/gems/ceedling-0.31.1/vendor/unity/src/unity.h"
+- build/test/mocks/mock_API_Lcd_port.h
+- build/test/mocks/mock_API_I2C.h
+- src/API_lcd.h

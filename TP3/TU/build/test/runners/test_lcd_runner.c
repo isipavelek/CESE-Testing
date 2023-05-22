@@ -2,6 +2,9 @@
 
 /*=======Automagically Detected Files To Include=====*/
 #include "unity.h"
+#include "cmock.h"
+#include "mock_API_Lcd_port.h"
+#include "mock_API_I2C.h"
 
 int GlobalExpectCount;
 int GlobalVerifyOrder;
@@ -19,12 +22,18 @@ static void CMock_Init(void)
   GlobalExpectCount = 0;
   GlobalVerifyOrder = 0;
   GlobalOrderError = NULL;
+  mock_API_Lcd_port_Init();
+  mock_API_I2C_Init();
 }
 static void CMock_Verify(void)
 {
+  mock_API_Lcd_port_Verify();
+  mock_API_I2C_Verify();
 }
 static void CMock_Destroy(void)
 {
+  mock_API_Lcd_port_Destroy();
+  mock_API_I2C_Destroy();
 }
 
 /*=======Setup (stub)=====*/
@@ -81,7 +90,8 @@ static void run_test(UnityTestFunction func, const char* name, UNITY_LINE_TYPE l
 int main(void)
 {
   UnityBegin("test_lcd.c");
-  run_test(test_siempre_falla , "test_siempre_falla ", 3);
+  run_test(test_siempre_falla , "test_siempre_falla ", 7);
 
+  CMock_Guts_MemFreeFinal();
   return UnityEnd();
 }

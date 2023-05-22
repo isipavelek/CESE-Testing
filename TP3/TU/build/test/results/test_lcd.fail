@@ -1,0 +1,18 @@
+---
+:source:
+  :path: test
+  :file: test_lcd.c
+:successes: []
+:failures:
+- :test: 'test_siempre_falla '
+  :line: 5
+  :message: Hola mundo
+  :unity_test_time: 0
+:ignores: []
+:counts:
+  :total: 1
+  :passed: 0
+  :failed: 1
+  :ignored: 0
+:stdout: []
+:time: 0.0007221570000410793

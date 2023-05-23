@@ -3,6 +3,8 @@
         "mock_api_lcd_port.h": "c",
         "api_lcd.h": "c",
         "api_i2c.h": "c",
-        "mock_api_i2c.h": "c"
+        "mock_api_i2c.h": "c",
+        "stdbool.h": "c",
+        "stdint.h": "c"
     }
 }

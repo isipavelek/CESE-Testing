@@ -1,0 +1,34 @@
+---
+:source:
+  :path: test
+  :file: test_lcd.c
+:successes:
+- :test: test_inicializa_correctamente
+  :line: 19
+  :message: ''
+  :unity_test_time: 0
+- :test: test_Envia4bitsLcd_envia
+  :line: 28
+  :message: ''
+  :unity_test_time: 0
+- :test: test_DatoAsciiLcd_envia
+  :line: 39
+  :message: ''
+  :unity_test_time: 0
+- :test: test_SacaTextoLcd_envia
+  :line: 50
+  :message: ''
+  :unity_test_time: 0
+- :test: test_DatoBCD_envia
+  :line: 59
+  :message: ''
+  :unity_test_time: 0
+:failures: []
+:ignores: []
+:counts:
+  :total: 5
+  :passed: 5
+  :failed: 0
+  :ignored: 0
+:stdout: []
+:time: 0.0005971570008114213

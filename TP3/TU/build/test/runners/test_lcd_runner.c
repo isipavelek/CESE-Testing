@@ -13,7 +13,11 @@ char* GlobalOrderError;
 /*=======External Functions This Runner Calls=====*/
 extern void setUp(void);
 extern void tearDown(void);
-extern void test_siempre_falla (void);
+extern void test_inicializa_correctamente(void);
+extern void test_Envia4bitsLcd_envia(void);
+extern void test_DatoAsciiLcd_envia(void);
+extern void test_SacaTextoLcd_envia(void);
+extern void test_DatoBCD_envia(void);
 
 
 /*=======Mock Management=====*/
@@ -90,7 +94,11 @@ static void run_test(UnityTestFunction func, const char* name, UNITY_LINE_TYPE l
 int main(void)
 {
   UnityBegin("test_lcd.c");
-  run_test(test_siempre_falla , "test_siempre_falla ", 7);
+  run_test(test_inicializa_correctamente, "test_inicializa_correctamente", 19);
+  run_test(test_Envia4bitsLcd_envia, "test_Envia4bitsLcd_envia", 28);
+  run_test(test_DatoAsciiLcd_envia, "test_DatoAsciiLcd_envia", 39);
+  run_test(test_SacaTextoLcd_envia, "test_SacaTextoLcd_envia", 50);
+  run_test(test_DatoBCD_envia, "test_DatoBCD_envia", 59);
 
   CMock_Guts_MemFreeFinal();
   return UnityEnd();
